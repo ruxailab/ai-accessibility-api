@@ -1,5 +1,9 @@
 from urllib.parse import urlparse
 
+def get_pa11y_style_context(tag, max_len=300):
+    html = str(tag)
+    return html if len(html) <= max_len else html[:max_len] + "... [truncated]"
+
 def analyze_anchor_tag(tag):  # tag is already a BS4 element
     issues = []
 
@@ -37,12 +41,14 @@ def analyze_anchor_tag(tag):  # tag is already a BS4 element
             return False
         return True
 
-    # Apply checks
+    # Use compact version for logging/report
+    context = get_pa11y_style_context(tag)
+
     if not is_descriptive_link(tag):
         issues.append({
             "code": 1,
             "module": "anchorInsight",
-            "element": str(tag),
+            "element": context,
             "issue": "Non-descriptive anchor text",
             "help": "Use meaningful link text that describes the destination or action."
         })
@@ -51,7 +57,7 @@ def analyze_anchor_tag(tag):  # tag is already a BS4 element
         issues.append({
             "code": 2,
             "module": "anchorInsight",
-            "element": str(tag),
+            "element": context,
             "issue": "External link missing target='_blank'",
             "help": "Add target='_blank' to open external links in a new tab."
         })
@@ -60,7 +66,7 @@ def analyze_anchor_tag(tag):  # tag is already a BS4 element
         issues.append({
             "code": 3,
             "module": "anchorInsight",
-            "element": str(tag),
+            "element": context,
             "issue": "Anchor used as button or missing href",
             "help": "Use <button> for actions, or ensure proper role and tabindex if using <a>."
         })
@@ -69,7 +75,7 @@ def analyze_anchor_tag(tag):  # tag is already a BS4 element
         issues.append({
             "code": 4,
             "module": "anchorInsight",
-            "element": str(tag),
+            "element": context,
             "issue": "Anchor is not keyboard navigable",
             "help": "Ensure anchor is focusable using correct tabindex and avoid disabled attribute."
         })
