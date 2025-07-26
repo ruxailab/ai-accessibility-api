@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from .routes import altsense, linksense 
+from .routes import altsense, linksense ,geminisense
 
 app = FastAPI(
     title="Web Accessibility Analyzer API",
@@ -10,6 +10,7 @@ app = FastAPI(
 # Include routers from different modules
 app.include_router(altsense.router, prefix="/altsense", tags=["AltSense Analysis"])
 app.include_router(linksense.router, prefix="/linksense", tags=["LinkSense Analysis"]) 
+app.include_router(geminisense.router, prefix="/geminisense", tags=["GeminiSense Analysis"]) 
 
 @app.get("/")
 async def root():

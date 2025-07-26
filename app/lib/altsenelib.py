@@ -25,7 +25,7 @@ def analyze_image_tag(tag):
         issues.append({
             "module": "imagealt",
             "element": str(tag),
-            "issue": "Vague alt text",
+            "issue": "alt text is not Descriptive",
             "help": "Avoid vague alt text like 'image' or 'photo'; describe the image content clearly."
         })
 
