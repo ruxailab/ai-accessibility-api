@@ -1,9 +1,6 @@
-from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 
-def analyze_anchor_tag(anchorTag):
-    soup = BeautifulSoup(anchorTag, 'html.parser')
-    tag = soup.find('a')
+def analyze_anchor_tag(tag):  # tag is already a BS4 element
     issues = []
 
     # 1. Check if link is descriptive
@@ -43,7 +40,7 @@ def analyze_anchor_tag(anchorTag):
     # Apply checks
     if not is_descriptive_link(tag):
         issues.append({
-            "code":1,
+            "code": 1,
             "module": "anchorInsight",
             "element": str(tag),
             "issue": "Non-descriptive anchor text",
@@ -52,7 +49,7 @@ def analyze_anchor_tag(anchorTag):
 
     if not is_external_with_blank(tag):
         issues.append({
-            "code":2,
+            "code": 2,
             "module": "anchorInsight",
             "element": str(tag),
             "issue": "External link missing target='_blank'",
@@ -61,7 +58,7 @@ def analyze_anchor_tag(anchorTag):
 
     if not is_valid_link(tag):
         issues.append({
-            "code":3,
+            "code": 3,
             "module": "anchorInsight",
             "element": str(tag),
             "issue": "Anchor used as button or missing href",
@@ -70,7 +67,7 @@ def analyze_anchor_tag(anchorTag):
 
     if not is_keyboard_accessible(tag):
         issues.append({
-            "code":4,
+            "code": 4,
             "module": "anchorInsight",
             "element": str(tag),
             "issue": "Anchor is not keyboard navigable",
@@ -78,4 +75,3 @@ def analyze_anchor_tag(anchorTag):
         })
 
     return issues
-

@@ -1,8 +1,6 @@
 from bs4 import BeautifulSoup
 
-def analyze_image_tag(imgTag):
-    soup = BeautifulSoup(imgTag, 'html.parser')
-    tag = soup.find('img')
+def analyze_image_tag(tag):
     issues = []
 
     # 1. Check if alt attribute is missing
