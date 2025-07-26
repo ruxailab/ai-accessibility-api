@@ -23,7 +23,7 @@ async def analyse_anchor_tag(url):
     for anchor_tag in anchor_tags:
         try:
             issue_for_tag = analyze_anchor_tag(anchor_tag)
-            all_issues.append(issue_for_tag)
+            all_issues.extend(issue_for_tag)
         except Exception as e:
             print(f"Error analyzing tag: {anchor_tag}, Error: {e}")
 

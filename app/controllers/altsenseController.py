@@ -15,6 +15,6 @@ async def analyze_alt_attributes_controller(url: str):
     all_issues=[]
     for img_tag in img_tags:
         issue_for_tag=analyze_image_tag(img_tag)
-        all_issues.append(issue_for_tag)
+        all_issues.extend(issue_for_tag)
 
     return all_issues
