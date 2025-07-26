@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, HttpUrl
-from controllers.altsenseController import analyze_alt_attributes_controller
+from ..controllers.altsenseController import analyze_alt_attributes_controller
 
 router = APIRouter()
 

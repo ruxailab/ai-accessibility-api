@@ -57,7 +57,4 @@ def fetch_html_with_selenium(url):
             driver.quit()
 
 
-url = "https://saltywebsite.vercel.app/"
-html_content = fetch_html_with_selenium(url)
 
-beautify_html = prettify_html(html_content)

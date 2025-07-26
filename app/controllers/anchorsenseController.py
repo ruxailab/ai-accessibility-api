@@ -1,38 +1,19 @@
-
 from bs4 import BeautifulSoup
-from bs4.element import Tag
-from utils.AnchorInsight.isDescriptive import is_descriptive_link
+from typing import List
+from ..utils.fetcher import fetch_html_with_selenium
+from ..utils.tagfetcher.tagFetcherUtil import get_anchor_tags_from_html
+from ..lib.anchorsense import analyze_anchor_tag
 
+async def analyse_anchor_tag(url):
 
-
-'''
-{
-    element: <a></a>
-    is_descriptive:yes,
-}
-
-'''
-
-anchorlist=[]
-anchor
-
-
-
-def fetch_all_anchor_tags(html_content):
-    soup = BeautifulSoup(html_content, 'html.parser')
-    anchor_tags = soup.find_all('a')
-    return anchor_tags
-
-
-
-def analyse_anchor_tag(html_content):
-    print(html_content)
-    anchor_tags=fetch_all_anchor_tags(html_content)
-    anchorObject={"element":anchor_tags}
-    for tag in anchor_tags:
-        anchorObject={"element":tag}
-        result=is_descriptive_link(tag)
-        
-        
-        
+    html_content=fetch_html_with_selenium(url)
+    # Retrieve all anchor tags from the HTML content
+    anchor_tags = get_anchor_tags_from_html(html_content)
     
+    all_issues = []
+    # Iterate through each anchor tag to analyze it
+    for anchor_tag in anchor_tags:
+        issue_for_tag = analyze_anchor_tag(anchor_tag)
+        all_issues.append(issue_for_tag)
+
+    return all_issues

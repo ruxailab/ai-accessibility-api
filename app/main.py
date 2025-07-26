@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routes import altsense, linksense 
+from .routes import altsense, linksense 
 
 app = FastAPI(
     title="Web Accessibility Analyzer API",
