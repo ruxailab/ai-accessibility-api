@@ -1,8 +1,13 @@
 import google.generativeai as genai
+import os
+from dotenv import load_dotenv
 
-# Set your Gemini API key
-genai.configure(api_key="YOUR_GEMINI_API_KEY")
-model = genai.GenerativeModel("gemini-pro")
+# Load environment variables
+load_dotenv()
+
+# Set your Gemini API key from environment
+genai.configure(api_key=os.getenv("GEMINI_KEY"))
+model = genai.GenerativeModel("gemma-3n-e2b-it")
 
 async def get_gemini_suggestion(input_data):
     prompt = f"""
