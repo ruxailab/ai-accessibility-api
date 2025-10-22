@@ -27,3 +27,7 @@ app.include_router(axe_colorsense.router, tags=["ColorSense Analysis"])
 @app.get("/")
 async def root():
     return {"message": "Welcome to the Web Accessibility Analyzer API! Visit /docs for API documentation."}
+
+@app.get("/healthz")
+async def healthz():
+    return {"status": "ok"}

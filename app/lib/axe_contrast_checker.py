@@ -26,13 +26,15 @@ class AxeColorContrastChecker:
         self.driver = None
     
     def _setup_driver(self):
-        """Setup headless Chrome driver"""
+        """Setup headless Chrome driver with safe defaults for containers"""
         chrome_options = Options()
-        chrome_options.add_argument('--headless')
+        chrome_options.add_argument('--headless=new')
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument('--disable-dev-shm-usage')
         chrome_options.add_argument('--disable-gpu')
-        
+        chrome_options.add_argument('--disable-software-rasterizer')
+
+        # Let webdriver-manager use HOME/XDG_CACHE_HOME which we set in the container
         service = Service(ChromeDriverManager().install())
         self.driver = webdriver.Chrome(service=service, options=chrome_options)
     

@@ -64,11 +64,15 @@ RUN pip install --no-cache-dir -r requirements.txt \
 COPY . .
 
 # Create non-root user for security
-RUN addgroup --system app && adduser --system --ingroup app app && chown -R app:app /app
+RUN addgroup --system app && adduser --system --home /home/app --ingroup app app \
+    && mkdir -p /home/app/.cache \
+    && chown -R app:app /home/app /app
 USER app
 
 # Cloud Run will set PORT; default to 8080
-ENV PORT=8080
+ENV PORT=8080 \
+    HOME=/home/app \
+    XDG_CACHE_HOME=/home/app/.cache
 
 # Ensure Chrome binaries are discoverable
 ENV GOOGLE_CHROME_SHIM=/usr/bin/google-chrome \
@@ -144,11 +148,15 @@ RUN pip install --no-cache-dir -r requirements.txt \
 COPY . .
 
 # Create non-root user for security
-RUN addgroup --system app && adduser --system --ingroup app app && chown -R app:app /app
+RUN addgroup --system app && adduser --system --home /home/app --ingroup app app \
+    && mkdir -p /home/app/.cache \
+    && chown -R app:app /home/app /app
 USER app
 
 # Cloud Run will set PORT; default to 8080
-ENV PORT=8080
+ENV PORT=8080 \
+    HOME=/home/app \
+    XDG_CACHE_HOME=/home/app/.cache
 
 # Ensure Chrome binaries are discoverable
 ENV GOOGLE_CHROME_SHIM=/usr/bin/google-chrome \
