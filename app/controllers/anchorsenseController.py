@@ -29,3 +29,29 @@ async def analyse_anchor_tag(url):
 
 
     return all_issues
+
+
+def analyse_anchor_tag_from_html(html_content: str) -> List:
+    """
+    Analyze anchor tags from HTML content directly (for file uploads)
+    
+    Args:
+        html_content: The HTML content as string
+        
+    Returns:
+        List of issues found in the HTML
+    """
+    print("retrieving anchor tags from HTML content")
+    anchor_tags = get_anchor_tags_from_html(html_content)
+    print(f"Type of anchor_tags: {type(anchor_tags)}, Length: {len(anchor_tags)}")
+    print("anchor tag processed")
+    
+    all_issues = []
+    for anchor_tag in anchor_tags:
+        try:
+            issue_for_tag = analyze_anchor_tag(anchor_tag)
+            all_issues.extend(issue_for_tag)
+        except Exception as e:
+            print(f"Error analyzing tag: {anchor_tag}, Error: {e}")
+
+    return all_issues
