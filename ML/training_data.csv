@@ -1,0 +1,299 @@
+text,label
+click here,bad
+read more,bad
+learn more,bad
+here,bad
+more,bad
+info,bad
+link,bad
+go,bad
+next,bad
+previous,bad
+submit,bad
+download,bad
+view,bad
+see more,bad
+details,bad
+click,bad
+tap here,bad
+this link,bad
+this,bad
+that,bad
+Download our comprehensive accessibility guide PDF,good
+Learn more about WCAG 2.1 guidelines,good
+Contact our support team,good
+View pricing plans,good
+Read the full article on web accessibility,good
+Navigate to the homepage,good
+Sign up for our newsletter,good
+Schedule a consultation,good
+Browse our product catalog,good
+Review our privacy policy,good
+Access your account dashboard,good
+Submit feedback form,good
+Download Q3 financial report,good
+View customer testimonials,good
+Explore accessibility features,good
+Read documentation for developers,good
+Check system requirements,good
+Compare pricing tiers,good
+Request a demo,good
+Join our community forum,good
+Update profile settings,good
+Reset your password,good
+Manage subscription preferences,good
+View order history,good
+Track your shipment,good
+Return to shopping cart,good
+Add item to wishlist,good
+Share on social media,good
+Print this page,good
+Save for later,good
+Find a store near you,good
+Book an appointment,good
+Start free trial,good
+Upgrade to premium,good
+Cancel subscription,good
+Download mobile app,good
+Watch tutorial video,good
+Listen to podcast episode,good
+Read blog post,good
+Browse job openings,good
+Apply for position,good
+Connect with us on LinkedIn,good
+Follow us on Twitter,good
+Visit our YouTube channel,good
+Subscribe to updates,good
+Unsubscribe from emails,good
+Report a bug,good
+Suggest a feature,good
+Rate this product,good
+Write a review,good
+Edit your comment,good
+Delete account,good
+Export data,good
+Import contacts,good
+Sync with calendar,good
+Enable notifications,good
+Disable auto-play,good
+Adjust privacy settings,good
+View terms of service,good
+Accept cookie policy,good
+Decline optional cookies,good
+Customize dashboard,good
+Filter search results,good
+Sort by date,good
+Sort by relevance,good
+Clear all filters,good
+Open in new window,good
+Download as PDF,good
+Share via email,good
+Copy link to clipboard,good
+Embed this content,good
+Report inappropriate content,good
+Block this user,good
+Mute notifications,good
+Archive conversation,good
+Mark as read,good
+Mark as unread,good
+Star this message,good
+Forward to a friend,good
+Reply to comment,good
+Quote this text,good
+Translate to Spanish,good
+Change language preference,good
+Increase font size,good
+Decrease font size,good
+Toggle dark mode,good
+Enable high contrast,good
+View accessibility options,good
+Skip to main content,good
+Navigate to footer,good
+Return to top of page,good
+Go back to previous page,good
+Proceed to checkout,good
+Continue shopping,good
+Apply discount code,good
+Remove item from cart,good
+Update quantity,good
+Select shipping method,good
+Choose payment option,good
+Confirm order,good
+Click to expand details,bad
+See the full list here,bad
+Get started now,bad
+Find out more,bad
+Discover our services,bad
+Explore our offerings,bad
+Check it out,bad
+Take a look,bad
+Have a peek,bad
+Click for more information,bad
+Read the article,bad
+Watch the video,bad
+Listen now,bad
+View details,bad
+Get info,bad
+More information,bad
+Additional details,bad
+Further reading,bad
+Related content,bad
+Visit page,bad
+Go to site,bad
+Open link,bad
+Follow link,bad
+Access here,bad
+Available here,bad
+Found here,bad
+Located here,bad
+Download file,bad
+Get document,bad
+Grab the PDF,bad
+Fetch report,bad
+Visit our blog to learn about the latest web accessibility trends and best practices,good
+Download the complete user manual for screen reader compatibility,good
+Register for our upcoming webinar on inclusive design principles,good
+Contact our accessibility team for personalized consultation,good
+Review the step-by-step installation guide for our software,good
+Access the API documentation for developers,good
+View detailed comparison of accessibility testing tools,good
+Read case studies about successful accessibility implementations,good
+Explore our collection of accessible design patterns,good
+Submit a request for accessibility accommodations,good
+Download VPAT (Voluntary Product Accessibility Template),good
+Learn about keyboard navigation best practices,good
+View color contrast checker tool,good
+Access screen reader testing guidelines,good
+Read about ARIA landmarks and their proper usage,good
+Download accessible form design checklist,good
+Review semantic HTML implementation guide,good
+Explore WCAG 2.1 AAA compliance requirements,good
+Access assistive technology compatibility matrix,good
+View accessibility audit report template,good
+info page,bad
+main site,bad
+our products,bad
+about us,bad
+services page,bad
+homepage link,bad
+menu,bad
+navigation,bad
+sidebar,bad
+footer,bad
+header,bad
+banner,bad
+widget,bad
+module,bad
+section,bad
+area,bad
+region,bad
+zone,bad
+panel,bad
+box,bad
+container,bad
+wrapper,bad
+frame,bad
+window,bad
+popup,bad
+modal,bad
+dialog,bad
+alert,bad
+notification,bad
+message,bad
+Return to the main accessibility resources page,good
+Navigate to our comprehensive services overview,good
+Visit our about page to learn about our mission,good
+Explore our product lineup and features,good
+Access the homepage and latest updates,good
+Open the main navigation menu,good
+Jump to the footer for contact information,good
+View our company information and history,good
+Browse all available services and solutions,good
+click now,bad
+tap to continue,bad
+press here,bad
+go here,bad
+start here,bad
+begin here,bad
+continue,bad
+proceed,bad
+start,bad
+begin,bad
+enter,bad
+join,bad
+register,bad
+login,bad
+signup,bad
+more details,bad
+additional info,bad
+full details,bad
+complete information,bad
+see here,bad
+look here,bad
+check this,bad
+view this,bad
+read this,bad
+get this,bad
+grab this,bad
+download now,bad
+get it now,bad
+buy now,bad
+shop now,bad
+order now,bad
+subscribe now,bad
+sign up,bad
+log in,bad
+more here,bad
+info here,bad
+details here,bad
+this page,bad
+that page,bad
+next page,bad
+previous page,bad
+page link,bad
+website,bad
+site,bad
+portal,bad
+platform,bad
+tool,bad
+resource,bad
+content,bad
+material,bad
+document,bad
+file,bad
+attachment,bad
+item,bad
+thing,bad
+stuff,bad
+option,bad
+feature,bad
+service,bad
+product,bad
+learn more here,bad
+read more here,bad
+click here for more,bad
+click here for details,bad
+click to read more,bad
+click to learn more,bad
+read the full article,bad
+read full story,bad
+see full article,bad
+view full story,bad
+read on,bad
+continue reading,bad
+keep reading,bad
+find more,bad
+discover more,bad
+explore more,bad
+see all,bad
+view all,bad
+show all,bad
+load more,bad
+show more,bad
+expand,bad
+collapse,bad
+toggle,bad
+open,bad
+close,bad
+minimize,bad
+maximize,bad
