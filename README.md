@@ -14,7 +14,7 @@ Before installing the Web Accessibility Analyzer API, ensure you have the follow
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/saltykheera/accessibility-api.git
+git clone https://github.com/ruxailab/ai-accessibility-api
 cd accessibility-api
 ```
 
@@ -60,13 +60,7 @@ genai.configure(api_key="your_actual_api_key_here")
 
 **Security Note**: In production, use environment variables instead of hardcoding API keys.
 
-### 6. Verify Installation
 
-Run the test script to ensure everything is working:
-
-```bash
-python test.py
-```
 
 This should successfully fetch HTML content from a test website.
 
