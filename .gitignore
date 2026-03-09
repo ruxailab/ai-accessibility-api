@@ -5,3 +5,7 @@ instance/
 .webassets-cache/
 
 .DS_Store
+# Virtual environments
+venv/
+env/
+.venv/
