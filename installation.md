@@ -15,7 +15,7 @@ Before installing the Web Accessibility Analyzer API, ensure you have the follow
 
 ```bash
 git clone https://github.com/ruxailab/ai-accessibility-api
-cd accessibility-api
+cd ai-accessibility-api
 ```
 
 ### 2. Create Virtual Environment (Recommended)
@@ -39,9 +39,11 @@ pip install -r requirements.txt
 ### 4. ChromeDriver Setup
 
 #### Option A: Automatic Setup (Recommended)
+
 The application uses Selenium with Chrome WebDriver. Ensure Google Chrome is installed on your system. ChromeDriver will be managed automatically by Selenium.
 
 #### Option B: Manual Setup
+
 1. Download ChromeDriver from [https://chromedriver.chromium.org/](https://chromedriver.chromium.org/)
 2. Extract and place in your system PATH
 3. Verify installation: `chromedriver --version`
@@ -60,7 +62,6 @@ genai.configure(api_key="your_actual_api_key_here")
 
 **Security Note**: In production, use environment variables instead of hardcoding API keys.
 
-
 This should successfully fetch HTML content from a test website.
 
 ## Running the Application
@@ -72,6 +73,7 @@ uvicorn app.main:app --reload
 ```
 
 The API will be available at:
+
 - **API Endpoint**: `http://localhost:8000`
 - **Interactive Documentation**: `http://localhost:8000/docs`
 - **Alternative Documentation**: `http://localhost:8000/redoc`
@@ -153,6 +155,7 @@ docker run -p 8000:8000 accessibility-api
 ## Next Steps
 
 After successful installation:
+
 1. Read the [Architecture Guide](architecture.md) to understand system design
 2. Read the [Product Overview](web-accessibility-analyzer.md) to understand features
 3. Visit `/docs` endpoint for interactive API documentation
