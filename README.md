@@ -15,7 +15,7 @@ Before installing the Web Accessibility Analyzer API, ensure you have the follow
 
 ```bash
 git clone https://github.com/ruxailab/ai-accessibility-api
-cd accessibility-api
+cd ai-accessibility-api
 ```
 
 ### 2. Create Virtual Environment (Recommended)
@@ -39,9 +39,11 @@ pip install -r requirements.txt
 ### 4. ChromeDriver Setup
 
 #### Option A: Automatic Setup (Recommended)
+
 The application uses Selenium with Chrome WebDriver. Ensure Google Chrome is installed on your system. ChromeDriver will be managed automatically by Selenium.
 
 #### Option B: Manual Setup
+
 1. Download ChromeDriver from [https://chromedriver.chromium.org/](https://chromedriver.chromium.org/)
 2. Extract and place in your system PATH
 3. Verify installation: `chromedriver --version`
@@ -51,18 +53,21 @@ The application uses Selenium with Chrome WebDriver. Ensure Google Chrome is ins
 #### Configure Gemini AI API Key
 
 1. Get your API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Open `app/lib/geminisuggester.py`
-3. Replace `"YOUR_GEMINI_API_KEY"` with your actual API key:
+2. Create a `.env` file in the root directory (using `.env.example` as a template )
+3. Add your actual API key:
 
-```python
-genai.configure(api_key="your_actual_api_key_here")
+```bash
+cp .env.example .env
 ```
 
-**Security Note**: In production, use environment variables instead of hardcoding API keys.
+Or else copy paste these into your .env
 
+```bash
+GEMINI_KEY=your_actual_api_key_here
+GEMINI_MODEL=gemma-3n-e2b-it
+```
 
-
-This should successfully fetch HTML content from a test website.
+**Security Note**: Never commit your `.env` file to source control. Ensure it's listed in `.gitignore`.
 
 ## Running the Application
 
@@ -73,6 +78,7 @@ uvicorn app.main:app --reload
 ```
 
 The API will be available at:
+
 - **API Endpoint**: `http://localhost:8000`
 - **Interactive Documentation**: `http://localhost:8000/docs`
 - **Alternative Documentation**: `http://localhost:8000/redoc`
@@ -154,5 +160,6 @@ docker run -p 8000:8000 accessibility-api
 ## Next Steps
 
 After successful installation:
+
 1. Visit `/docs` endpoint for interactive API documentation
 2. Test the API endpoints with sample URLs
