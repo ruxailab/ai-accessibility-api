@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .routes import altsense, linksense, geminisense, colorsense, axe_colorsense
+from .routes import altsense, linksense, geminisense, colorsense, axe_colorsense, sentiment
 
 app = FastAPI(
     title="Web Accessibility Analyzer API",
@@ -23,6 +23,7 @@ app.include_router(linksense.router, prefix="/linksense", tags=["LinkSense Analy
 app.include_router(geminisense.router, prefix="/geminisense", tags=["GeminiSense Analysis"])
 # app.include_router(colorsense.router, prefix="/colorsense-old", tags=["ColorSense Analysis - Deprecated"])  # Old implementation
 app.include_router(axe_colorsense.router, tags=["ColorSense Analysis"]) 
+app.include_router(sentiment.router, prefix="/sentiment", tags=["Sentiment Analysis"])
 
 @app.get("/")
 async def root():
