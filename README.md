@@ -4,6 +4,9 @@
 
 ![System Architecture](Architecture.svg)
 
+## Components 
+![Components](components.svg)
+
 ## Prerequisites
 
 Before installing the Web Accessibility Analyzer API, ensure you have the following prerequisites:
