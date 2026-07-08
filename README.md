@@ -1,5 +1,9 @@
 # Installation Guide
 
+## System Architecture
+
+![System Architecture](Architecture.svg)
+
 ## Prerequisites
 
 Before installing the Web Accessibility Analyzer API, ensure you have the following prerequisites:
