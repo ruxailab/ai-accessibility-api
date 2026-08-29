@@ -1,0 +1,22 @@
+{
+  "sentiment": {
+    "type": "string",
+    "allowed_values": ["positive", "negative", "neutral"]
+  },
+  "emotion": {
+    "type": "string",
+    "examples": ["joy", "anger", "sadness", "fear", "surprise"]
+  },
+  "intent": {
+    "type": "string",
+    "examples": ["complaint", "feedback", "suggestion", "praise"]
+  },
+  "confidence_score": {
+    "type": "float",
+    "range": [0, 1]
+  },
+  "text_summary": {
+    "type": "string",
+    "description": "Human readable explanation of sentiment result"
+  }
+}
